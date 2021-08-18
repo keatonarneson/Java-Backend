@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class Deck {
-  List<Card> cards = new ArrayList<>();
+  ArrayList<Card> cards = new ArrayList<>();
 
   Deck() {
+    // Instantiates Deck with 52 cards
     for (int i = 0; i < 4; i++) {
       for (int j = 2; j <= 14; j++) {
         Card card = new Card();
@@ -16,6 +16,7 @@ public class Deck {
     }
   }
 
+  // Gets card suit as String based on loop count
   private String getCardSuit(int cardNumber) {
     String cardSuit = "";
 
@@ -39,6 +40,7 @@ public class Deck {
     return cardSuit;
   }
 
+  // Gets card number as String based on loop count (card number)
   private String getCardNumberName(int cardNumber) {
     String cardName = "";
 
@@ -99,15 +101,6 @@ public class Deck {
 
   public Card draw() {
     return cards.remove(0);
-  }
-
-
-
-  void describe() {
-    for (Card card : cards) {
-      card.describe();
-    }
-    
   }
 
 }
